@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<TabPane xmlns:fx="http://javafx.com/fxml">
+
+    <tabs>
+
+        <Tab text="Movie">
+            <content>
+                <fx:include source="Movie.fxml"/>
+            </content>
+        </Tab>
+
+        <Tab text="Actor">
+            <content>
+                <fx:include source="Actor.fxml"/>
+            </content>
+        </Tab>
+
+        <Tab text="MovieActor">
+            <content>
+                <fx:include source="MovieActor.fxml"/>
+            </content>
+        </Tab>
+
+    </tabs>
+</TabPane>

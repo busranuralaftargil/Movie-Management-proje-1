@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/25.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ActorController">
+
+    <children>
+        <GridPane layoutX="35" layoutY="35" hgap="20" vgap="22">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <!-- Row 0: ID + GET -->
+            <Label text="ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="idField" prefWidth="320" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Button text="GET" prefWidth="90" onAction="#onGet" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+
+            <!-- Row 1 -->
+            <Label text="NAME:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="nameField" prefWidth="320" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <!-- Row 2 + CLEAR -->
+            <Label text="BIRTH YEAR:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="birthYearField" prefWidth="320" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <Button text="CLEAR" prefWidth="90" onAction="#onClear" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+
+            <!-- Buttons -->
+            <HBox spacing="18" GridPane.rowIndex="4" GridPane.columnIndex="1">
+                <children>
+                    <Button text="SAVE" prefWidth="110" onAction="#onSave"/>
+                    <Button text="UPDATE" prefWidth="110" onAction="#onUpdate"/>
+                    <Button text="DELETE" prefWidth="110" onAction="#onDelete"/>
+                    <Button text="CLOSE" prefWidth="110" onAction="#onClose"/>
+                </children>
+            </HBox>
+
+        </GridPane>
+    </children>
+</AnchorPane>
